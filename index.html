@@ -4,39 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Everday Git</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
    <h1>1.Get started</h1> 
+
+
    <p>
     Set up your development environment and create all the necessary files and folders.
 
 
    </p>
+
    <h1>2.What is Git</h1>
    <p>
-    Git is a version control system. If that sounds complicated, don't worry—let's break it down.
-A version control system (VCS) is a tool that helps you manage changes to files over time. 
-Why is Version Control Important?
-Backup and Safety: If something goes wrong, you can always go back to a previous version.
-Collaboration: Multiple people can work on the same project simultaneously without interfering with each other’s work.
-Tracking Changes: You can see who made what changes and when.
-Experimentation: You can try out new ideas without the fear of ruining the original project because you can always revert back.
-Other Version Control Systems Like Git
-Git is one of many version control systems, but it’s by far the most popular. Here are a few others:
-
-Subversion (SVN): A centralized version control system where the history is stored on a single server.
-Mercurial: Similar to Git, it's a distributed version control system but is designed to be simpler.
-Perforce: Often used in large enterprises, it also focuses on version control but with a centralized approach.
-While these tools have their merits, Git stands out for its speed, flexibility, and popularity. That’s why many developers and teams worldwide use Git in their daily workflows.
-
-
-By the end of this post, you'll have a solid understanding of how to set up and use Git, along with GitHub, to manage your own projects!
+    Git is a version control system.
+    A version control system (VCS) is a tool that helps you manage changes to files over time. 
+    Why is Version Control Important?
+    Backup and Safety: If something goes wrong, you can always go back to a previous version.
+    Collaboration: Multiple people can work on the same project simultaneously without interfering with each other’s work.
+    Tracking Changes: You can see who made what changes and when.
+    Experimentation: You can try out new ideas without the fear of ruining the original project because you can always revert back.
+    Other Version Control Systems Like Git
+    Git is one of many version control systems, but it’s by far the most popular. Here are a few others:
+    Subversion (SVN): A centralized version control system where the history is stored on a single server.
+    Mercurial: Similar to Git, it's a distributed version control system but is designed to be simpler.
+    Perforce: Often used in large enterprises, it also focuses on version control but with a centralized approach.
+    While these tools have their merits, Git stands out for its speed, flexibility, and popularity. That’s why many developers and teams worldwide use Git in their daily workflows.
+    By the end of this post, you'll have a solid understanding of how to set up and use Git, along with GitHub, to manage your own projects!
 
 
    </p>
 <h2>3.Installing Git </h2>
     <p>
-        First check if git is installed in your machine.To check that open your command prompt and type:
+       First check if git is installed in your machine.To check that open your command prompt and type:
         <br><code style="font-size: large;"> git --version</code>
         <img src="/images/image1.png" alt="Git version command prompt">
         <caption>checking git version</caption> <br><br>
@@ -56,33 +57,44 @@ By the end of this post, you'll have a solid understanding of how to set up and 
         </p>
         <h2>5.Adding files to the staging area</h2>
       <p>
-        A git repository is a directory where Git tracks changes to files.To initialize your repository open your command prompt and type:
-        <br><code style="font-size: large;"> git init </code>
-        <img src="/images/image4.png">
+        The staging area is is where you prepare files to be commited.open your command prompt and type:
+        <br><code style="font-size: large;"> git add .</code>
+        <img src="/images/image5.png">
         </p>
         <h2>6.Commiting stage</h2>
       <p>
-        A git repository is a directory where Git tracks changes to files.To initialize your repository open your command prompt and type:
-        <br><code style="font-size: large;"> git init </code>
-        <img src="/images/image4.png">
+        Next you have to commit your changes with a message describing the changes youve made to the file, open your command prompt and type:
+        <br><code style="font-size: large;"> git commit -m"Your commit message" </code>
+        To view past commits:
+        git log
+        To revert to a particular commit:
+        git checkout commit_hash>
+        <img src="/images/image6.png">
         </p>
         <h2>7.Creating a Branch</h2>
+        <h3>Branches</h3>
       <p>
-        A git repository is a directory where Git tracks changes to files.To initialize your repository open your command prompt and type:
-        <br><code style="font-size: large;"> git init </code>
-        <img src="/images/image4.png">
+       Branches are one of git features where it allows you to work on different versions of your project simultaneously.They are essential for manaing features and fixes separately.To create a new branch open your command prompt and type:
+        <br><code style="font-size: large;"> git branch branch_name </code>
+        <img src="/images/image7.png">
         </p>
         <h2>8.Viewing all branches</h2>
       <p>
-        A git repository is a directory where Git tracks changes to files.To initialize your repository open your command prompt and type:
-        <br><code style="font-size: large;"> git init </code>
-        <img src="/images/image4.png">
+        To view all branches and see the active oney open your command prompt and type:
+        <br><code style="font-size: large;"> git branch </code>
+        <img src="/images/image8.png">
         </p>
-        <h2>9.Merging a branch</h2>
+        h2>9.Switching Active Branches</h2>
       <p>
-        A git repository is a directory where Git tracks changes to files.To initialize your repository open your command prompt and type:
-        <br><code style="font-size: large;"> git init </code>
-        <img src="/images/image4.png">
+        By default the active branch is Master to change that open your command prompt and type:
+        <br><code style="font-size: large;"> git switch branch_name</code>
+        <img src="/images/image9.png">
+        </p>
+        <h2>10.Merging a branch</h2>
+      <p>
+        Merge changes from one branch into another example merging the created branch with the master branch with open your command prompt and type:
+        <br><code style="font-size: large;"> git merge branch_name </code>
+        <img src="/images/image10.png">
         </p>
         <h2>11.Deleting a branch</h2>
       <p>
